@@ -17,10 +17,3 @@ This repository aims to develop a **public web UI** for accessing and visualizin
 ## 🤝 Contributing  
 Contributions are welcome! Feel free to submit **issues**, **feature requests**, or **pull requests**.  
 Let's build a **transparent and accessible** business register platform together. 🚀  
-
----
-
-📩 **Contact & Support**  
-- **Responsible Authority:** Austrian Ministry of Justice  
-- **Contact Page:** [JustizOnline](https://justizonline.gv.at/jop/web/content/kontakt)  
-- **Publishing Entity Email:** [justizonline-iwg@brz.gv.at](mailto:justizonline-iwg@brz.gv.at)  
