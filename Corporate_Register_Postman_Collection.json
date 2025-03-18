@@ -1,0 +1,250 @@
+{
+    "info": {
+        "name": "JustizOnline SOAP API - Search Company",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": "Postman collection for JustizOnline SOAP API to search for a company by name."
+    },
+    "item": [
+        {
+            "name": "Search Company by Name (SOAP)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/soap+xml;charset=UTF-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "\"\""
+                    },
+                    {
+                        "key": "X-Api-Key",
+                        "value": "{{api_key}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n               xmlns:suc=\"ns://firmenbuch.justiz.gv.at/Abfrage/SucheFirmaRequest\">\n    <soap:Header/>\n    <soap:Body>\n        <suc:SUCHEFIRMAREQUEST>\n            <suc:FIRMENWORTLAUT>Datenkraftwerk GmbH</suc:FIRMENWORTLAUT>\n            <suc:EXAKTESUCHE>true</suc:EXAKTESUCHE>\n            <suc:SUCHBEREICH>1</suc:SUCHBEREICH>\n            <suc:GERICHT></suc:GERICHT>\n            <suc:RECHTSFORM></suc:RECHTSFORM>\n            <suc:RECHTSEIGENSCHAFT></suc:RECHTSEIGENSCHAFT>\n            <suc:ORTNR></suc:ORTNR>\n        </suc:SUCHEFIRMAREQUEST>\n    </soap:Body>\n</soap:Envelope>"
+                },
+                "url": {
+                    "raw": "https://justizonline.gv.at/jop/api/at.gv.justiz.fbw/ws",
+                    "protocol": "https",
+                    "host": [
+                        "justizonline",
+                        "gv",
+                        "at"
+                    ],
+                    "path": [
+                        "jop",
+                        "api",
+                        "at.gv.justiz.fbw",
+                        "ws"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Search Document by Firmenbuchnummer (SOAP)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/soap+xml;charset=UTF-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "\"\""
+                    },
+                    {
+                        "key": "X-Api-Key",
+                        "value": "{{api_key}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n                  xmlns:suc=\"ns://firmenbuch.justiz.gv.at/Abfrage/SucheUrkundeRequest\">\n    <soapenv:Header/>\n    <soapenv:Body>\n        <suc:SUCHEURKUNDEREQUEST>\n            <suc:FNR>629 a</suc:FNR>\n        </suc:SUCHEURKUNDEREQUEST>\n    </soapenv:Body>\n</soapenv:Envelope>"
+                },
+                "url": {
+                    "raw": "https://justizonline.gv.at/jop/api/at.gv.justiz.fbw/ws",
+                    "protocol": "https",
+                    "host": [
+                        "justizonline",
+                        "gv",
+                        "at"
+                    ],
+                    "path": [
+                        "jop",
+                        "api",
+                        "at.gv.justiz.fbw",
+                        "ws"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Search Changes in Documents (SOAP)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/soap+xml;charset=UTF-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "\"\""
+                    },
+                    {
+                        "key": "X-Api-Key",
+                        "value": "{{api_key}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n               xmlns:ver=\"ns://firmenbuch.justiz.gv.at/Abfrage/VeraenderungenUrkundeRequest\">\n    <soap:Header/>\n    <soap:Body>\n        <ver:VERAENDERUNGENURKUNDEREQUEST>\n            <ver:VON>2014-11-25</ver:VON>\n            <ver:BIS>2014-11-25</ver:BIS>\n        </ver:VERAENDERUNGENURKUNDEREQUEST>\n    </soap:Body>\n</soap:Envelope>"
+                },
+                "url": {
+                    "raw": "https://justizonline.gv.at/jop/api/at.gv.justiz.fbw/ws",
+                    "protocol": "https",
+                    "host": [
+                        "justizonline",
+                        "gv",
+                        "at"
+                    ],
+                    "path": [
+                        "jop",
+                        "api",
+                        "at.gv.justiz.fbw",
+                        "ws"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Search Changes in Companies (SOAP)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/soap+xml;charset=UTF-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "\"\""
+                    },
+                    {
+                        "key": "X-Api-Key",
+                        "value": "{{api_key}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n               xmlns:ver=\"ns://firmenbuch.justiz.gv.at/Abfrage/VeraenderungenFirmaRequest\">\n    <soap:Header/>\n    <soap:Body>\n        <ver:VERAENDERUNGENFIRMAREQUEST>\n            <ver:VON>2014-11-25</ver:VON>\n            <ver:BIS>2014-11-25</ver:BIS>\n            <!--Optional:-->\n            <ver:GERICHT>007</ver:GERICHT>\n            <!--Optional:-->\n            <ver:RECHTSFORM>AG</ver:RECHTSFORM>\n        </ver:VERAENDERUNGENFIRMAREQUEST>\n    </soap:Body>\n</soap:Envelope>"
+                },
+                "url": {
+                    "raw": "https://justizonline.gv.at/jop/api/at.gv.justiz.fbw/ws",
+                    "protocol": "https",
+                    "host": [
+                        "justizonline",
+                        "gv",
+                        "at"
+                    ],
+                    "path": [
+                        "jop",
+                        "api",
+                        "at.gv.justiz.fbw",
+                        "ws"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Company Extract (Auszug) (SOAP)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/soap+xml;charset=UTF-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "\"\""
+                    },
+                    {
+                        "key": "X-Api-Key",
+                        "value": "{{api_key}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n               xmlns:aus=\"ns://firmenbuch.justiz.gv.at/Abfrage/v2/AuszugRequest\">\n    <soap:Header/>\n    <soap:Body>\n        <aus:AUSZUG_V2_REQUEST>\n            <aus:FNR>5h</aus:FNR>\n            <aus:STICHTAG>2015-12-22</aus:STICHTAG>\n            <aus:UMFANG>Kurzinformation</aus:UMFANG>\n        </aus:AUSZUG_V2_REQUEST>\n    </soap:Body>\n</soap:Envelope>"
+                },
+                "url": {
+                    "raw": "https://justizonline.gv.at/jop/api/at.gv.justiz.fbw/ws",
+                    "protocol": "https",
+                    "host": [
+                        "justizonline",
+                        "gv",
+                        "at"
+                    ],
+                    "path": [
+                        "jop",
+                        "api",
+                        "at.gv.justiz.fbw",
+                        "ws"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Search Changes in Companies (Updated) (SOAP)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/soap+xml;charset=UTF-8"
+                    },
+                    {
+                        "key": "SOAPAction",
+                        "value": "\"\""
+                    },
+                    {
+                        "key": "X-Api-Key",
+                        "value": "{{api_key}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"\n               xmlns:ver=\"ns://firmenbuch.justiz.gv.at/Abfrage/VeraenderungenFirmaRequest\">\n    <soap:Header/>\n    <soap:Body>\n        <ver:VERAENDERUNGENFIRMAREQUEST>\n            <ver:VON>2014-11-25</ver:VON>\n            <ver:BIS>2014-11-25</ver:BIS>\n            <ver:GERICHT>007</ver:GERICHT>\n            <ver:RECHTSFORM>AG</ver:RECHTSFORM>\n            <ver:ARTDERVERAENDERUNG>Neuregistrierung</ver:ARTDERVERAENDERUNG>\n        </ver:VERAENDERUNGENFIRMAREQUEST>\n    </soap:Body>\n</soap:Envelope>"
+                },
+                "url": {
+                    "raw": "https://justizonline.gv.at/jop/api/at.gv.justiz.fbw/ws",
+                    "protocol": "https",
+                    "host": [
+                        "justizonline",
+                        "gv",
+                        "at"
+                    ],
+                    "path": [
+                        "jop",
+                        "api",
+                        "at.gv.justiz.fbw",
+                        "ws"
+                    ]
+                }
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "api_key",
+            "value": "YOUR_API_KEY_HERE",
+            "type": "string"
+        }
+    ]
+}
