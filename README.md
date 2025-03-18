@@ -8,7 +8,8 @@ This repository aims to develop a **public web UI** for accessing and visualizin
 - **Geographical Coverage:** Austria (WGS84 Polygon)  
 - **Update Frequency:** Daily  
 - **API Documentation:** [Download API Docs](https://justizonline.gv.at/jop/web/assets/iwg/WebService(HVD)_20250116.zip)  
-- **Official Dataset URL:** [Data.gv.at](https://www.data.gv.at/katalog/dataset/e91bd464-be86-453c-b693-2ab818e11df2#additional-info)  
+- **Official Dataset URL:** [Data.gv.at](https://www.data.gv.at/katalog/dataset/e91bd464-be86-453c-b693-2ab818e11df2#additional-info)
+- **Request API-Key:** [Request API-Key](https://justizonline.gv.at/jop/web/iwg/register)
 
 ## 🎯 Goals  
 - Provide an **intuitive and user-friendly** interface for browsing and querying business register data.  
