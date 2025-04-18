@@ -2,6 +2,8 @@
 
 This repository aims to develop a **public web UI** for accessing and visualizing **High Value Datasets (HVD)** from the Austrian **Business Register**. These datasets are defined in **Annex 5 of Commission Implementing Regulation (EU) 2023/138**, ensuring open access to essential company data in a standardized and reusable format.  
 
+## Solution - https://openfirmenbuch.at/
+
 ## 📌 Project Scope  
 - **Data Source:** [Austrian Ministry of Justice (BMJ)](https://www.data.gv.at/auftritte/bmj)  
 - **License:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://justizonline.gv.at/jop/web/iwg/terms)  
